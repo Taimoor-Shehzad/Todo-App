@@ -21,7 +21,7 @@ const Prefrences = () => {
             colors={colors.gradients.primary}
             style={styles.settingIcon}
           >
-            <Ionicons name="moon" size={16} color="#fff" />
+            <Ionicons name="moon" size={18} color="#fff" />
           </LinearGradient>
           <Text style={styles.settingText}>Dark Mode</Text>
         </View>
@@ -40,7 +40,7 @@ const Prefrences = () => {
             colors={colors.gradients.warning}
             style={styles.settingIcon}
           >
-            <Ionicons name="notifications" size={16} color="#fff" />
+            <Ionicons name="notifications" size={18} color="#fff" />
           </LinearGradient>
           <Text style={styles.settingText}>Notifications</Text>
         </View>
@@ -61,7 +61,7 @@ const Prefrences = () => {
             colors={colors.gradients.success}
             style={styles.settingIcon}
           >
-            <Ionicons name="notifications" size={16} color="#fff" />
+            <Ionicons name="notifications" size={18} color="#fff" />
           </LinearGradient>
           <Text style={styles.settingText}>Auto Sync</Text>
         </View>

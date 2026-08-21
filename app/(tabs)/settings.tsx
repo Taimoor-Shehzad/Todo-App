@@ -6,6 +6,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons } from "@expo/vector-icons";
 import ProgressStats from "@/components/ProgressStats";
 import Prefrences from "@/components/Prefrences";
+import DangerZone from "@/components/DangerZone";
 
 const Settings = () => {
   const { colors } = useTheme();
@@ -34,6 +35,7 @@ const Settings = () => {
         >
           <ProgressStats />
           <Prefrences />
+          <DangerZone />
         </ScrollView>
       </SafeAreaView>
     </LinearGradient>
