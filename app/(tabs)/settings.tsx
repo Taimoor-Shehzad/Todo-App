@@ -1,12 +1,18 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { Text } from "react-native";
+import React from "react";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { createSettingsStyles } from "@/assets/styles/settings.styles";
+import useTheme from "@/hooks/useTheme";
 
-const settings = () => {
+const Settings = () => {
+  const { colors } = useTheme();
+  const styles = createSettingsStyles(colors);
+
   return (
-    <View>
+    <SafeAreaView>
       <Text>settings</Text>
-    </View>
-  )
-}
+    </SafeAreaView>
+  );
+};
 
-export default settings
+export default Settings;
