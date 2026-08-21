@@ -1,17 +1,14 @@
 import { ScrollView, Text, View } from "react-native";
-import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { createSettingsStyles } from "@/assets/styles/settings.styles";
 import useTheme from "@/hooks/useTheme";
 import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons } from "@expo/vector-icons";
 import ProgressStats from "@/components/ProgressStats";
+import Prefrences from "@/components/Prefrences";
 
 const Settings = () => {
-  const [isSync, setIsSync] = useState(true);
-  const [notifications, setNotification] = useState(true);
-
-  const { colors, toggleDarkMode } = useTheme();
+  const { colors } = useTheme();
   const styles = createSettingsStyles(colors);
 
   return (
@@ -31,8 +28,12 @@ const Settings = () => {
             <Text style={styles.title}>Settings</Text>
           </View>
         </View>
-        <ScrollView style={styles.scrollView}>
+        <ScrollView
+          style={styles.scrollView}
+          contentContainerStyle={styles.content}
+        >
           <ProgressStats />
+          <Prefrences />
         </ScrollView>
       </SafeAreaView>
     </LinearGradient>
