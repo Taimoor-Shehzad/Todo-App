@@ -1,50 +1,116 @@
-# Welcome to your Expo app 👋
+# Todo App 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A clean and modern Todo application built with Expo + React Native for daily task tracking. It helps you manage tasks, mark them complete, edit entries, and monitor your progress at a glance.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Add new tasks quickly from the home screen
+- Mark todos as complete or incomplete
+- Edit existing task text inline
+- Delete tasks with confirmation
+- View empty-state UI when no tasks are present
+- Track daily progress with a polished dashboard-style layout
+- Built with a mobile-first design using Expo Router and NativeWind
+- Persistent backend powered by Convex
 
-   ```bash
-   npm install
-   ```
+## Tech Stack
 
-2. Start the app
+- React Native
+- Expo
+- Expo Router
+- TypeScript
+- NativeWind / Tailwind CSS
+- Convex for data storage and real-time updates
+- React Native Safe Area Context
+- Expo Vector Icons
 
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## Project Structure
 
 ```bash
-npm run reset-project
+.
+├── app/                 # App screens and routing
+├── assets/             # App assets and static files
+├── components/         # Reusable UI components
+├── convex/             # Convex schema and database functions
+├── hooks/              # Custom hooks
+├── .gitignore
+├── app.json            # Expo app configuration
+├── babel.config.js     # Babel config
+├── eslint.config.js    # ESLint configuration
+├── global.css          # Global Tailwind styles
+├── package.json        # Project dependencies and scripts
+├── tailwind.config.js  # Tailwind configuration
+├── tsconfig.json       # TypeScript configuration
+├── README.md           # Project documentation
+└── package-lock.json   # Lockfile for npm dependencies
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Getting Started
 
-## Learn more
+### Prerequisites
 
-To learn more about developing your project with Expo, look at the following resources:
+- Node.js 18+
+- npm or yarn
+- Expo CLI
+- A Convex account/project if you want to run the backend locally
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Installation
 
-## Join the community
+```bash
+git clone https://github.com/Taimoor-Shehzad/Todo-App.git
+cd Todo-App
+npm install
+```
 
-Join our community of developers creating universal apps.
+### Run the app
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Start the Convex backend in one terminal:
+
+```bash
+npx convex dev
+```
+
+Start the Expo app in another terminal:
+
+```bash
+npm start
+```
+
+You can then run it on:
+
+- Android: `npm run android`
+- iOS: `npm run ios`
+- Web: `npm run web`
+
+## How It Works
+
+The app uses a simple task model stored in Convex:
+
+- Each todo has a text value and completion status
+- Tasks are fetched in real time from the database
+- Users can add, update, toggle, and delete tasks without reloading the app
+- The layout is designed to feel lightweight and friendly for daily use
+
+## Screens
+
+- Home screen: task list and task creation
+- Settings screen: app preferences and utility actions
+
+## Notes
+
+This project is a good starting point for building a production-ready productivity app, and it can be extended with features such as:
+
+- task priorities
+- due dates
+- categories or labels
+- local notifications
+- authentication
+- cloud sync across devices
+
+## Contributing
+
+Contributions are welcome. If you'd like to improve the app, feel free to fork the repository and submit a pull request.
+
+## License
+
+This project is currently unlicensed. If you plan to distribute or publish it publicly, consider adding a license file.
