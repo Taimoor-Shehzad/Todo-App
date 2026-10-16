@@ -127,6 +127,7 @@ export const createHomeStyles = (colors: ColorScheme) => {
     },
     todoItemWrapper: {
       marginVertical: 12,
+      backgroundColor: "white",
     },
     todoItem: {
       flexDirection: "row",

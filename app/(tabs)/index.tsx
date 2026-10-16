@@ -1,4 +1,15 @@
+import { createHomeStyles } from "@/assets/styles/home.styles";
+import EmptyState from "@/components/EmptyState";
+import Header from "@/components/Header";
+import LoadingSpinner from "@/components/LoadingSpinner";
+import TodoInput from "@/components/TodoInput";
+import { api } from "@/convex/_generated/api";
+import { Doc, Id } from "@/convex/_generated/dataModel";
 import useTheme from "@/hooks/useTheme";
+import { Ionicons } from "@expo/vector-icons";
+import { useMutation, useQuery } from "convex/react";
+import { LinearGradient } from "expo-linear-gradient";
+import { useState } from "react";
 import {
   Alert,
   FlatList,
@@ -8,18 +19,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { createHomeStyles } from "@/assets/styles/home.styles";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { LinearGradient } from "expo-linear-gradient";
-import Header from "@/components/Header";
-import TodoInput from "@/components/TodoInput";
-import { useMutation, useQuery } from "convex/react";
-import { api } from "@/convex/_generated/api";
-import LoadingSpinner from "@/components/LoadingSpinner";
-import { Doc, Id } from "@/convex/_generated/dataModel";
-import { Ionicons } from "@expo/vector-icons";
-import EmptyState from "@/components/EmptyState";
-import { useState } from "react";
 
 export default function Index() {
   const { colors } = useTheme();

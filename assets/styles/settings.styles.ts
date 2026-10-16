@@ -8,10 +8,11 @@ export const createSettingsStyles = (colors: ColorScheme) => {
     },
     safeArea: {
       flex: 1,
+      marginTop: 40,
     },
     header: {
       paddingHorizontal: 24,
-      paddingVertical: 32,
+      paddingVertical: 18,
       paddingBottom: 24,
     },
     titleContainer: {
@@ -37,6 +38,7 @@ export const createSettingsStyles = (colors: ColorScheme) => {
     },
     content: {
       paddingHorizontal: 20,
+      paddingVertical: 15,
       gap: 20,
       paddingBottom: 120,
     },

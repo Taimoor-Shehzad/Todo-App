@@ -1,10 +1,11 @@
-import React from "react";
-import { Tabs } from "expo-router";
-import { Ionicons } from "@expo/vector-icons";
 import useTheme from "@/hooks/useTheme";
+import { Ionicons } from "@expo/vector-icons";
+import { Tabs } from "expo-router";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const TabsLayout = () => {
   const { colors } = useTheme();
+  const insets = useSafeAreaInsets();
 
   return (
     <Tabs
@@ -14,14 +15,12 @@ const TabsLayout = () => {
         headerShown: false,
         tabBarStyle: {
           backgroundColor: colors.surface,
-          paddingBottom: 20,
-          paddingTop: 10,
-          height: 90,
+          paddingBottom: insets.bottom,
           borderTopColor: colors.border,
           borderTopWidth: 1,
         },
         tabBarLabelStyle: {
-          fontSize: 12,
+          fontSize: 11,
           fontWeight: 600,
         },
       }}
@@ -29,16 +28,24 @@ const TabsLayout = () => {
       <Tabs.Screen
         name="index"
         options={{
-          tabBarIcon: ({ size, color }) => (
-            <Ionicons name="flash-outline" size={size} color={color} />
+          tabBarIcon: ({ size, color, focused }) => (
+            <Ionicons
+              name={focused ? "flash" : "flash-outline"}
+              size={size}
+              color={color}
+            />
           ),
         }}
       />
       <Tabs.Screen
         name="settings"
         options={{
-          tabBarIcon: ({ size, color }) => (
-            <Ionicons name="settings-outline" size={size} color={color} />
+          tabBarIcon: ({ size, color, focused }) => (
+            <Ionicons
+              name={focused ? "settings" : "settings-outline"}
+              size={size}
+              color={color}
+            />
           ),
         }}
       />

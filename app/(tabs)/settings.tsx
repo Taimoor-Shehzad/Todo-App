@@ -1,12 +1,11 @@
-import { ScrollView, Text, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 import { createSettingsStyles } from "@/assets/styles/settings.styles";
-import useTheme from "@/hooks/useTheme";
-import { LinearGradient } from "expo-linear-gradient";
-import { Ionicons } from "@expo/vector-icons";
-import ProgressStats from "@/components/ProgressStats";
-import Prefrences from "@/components/Prefrences";
 import DangerZone from "@/components/DangerZone";
+import Prefrences from "@/components/Prefrences";
+import ProgressStats from "@/components/ProgressStats";
+import useTheme from "@/hooks/useTheme";
+import { Ionicons } from "@expo/vector-icons";
+import { LinearGradient } from "expo-linear-gradient";
+import { ScrollView, Text, View } from "react-native";
 
 const Settings = () => {
   const { colors } = useTheme();
@@ -17,7 +16,7 @@ const Settings = () => {
       colors={colors.gradients.background}
       style={styles.container}
     >
-      <SafeAreaView style={styles.safeArea}>
+      <View style={styles.safeArea}>
         <View style={styles.header}>
           <View style={styles.titleContainer}>
             <LinearGradient
@@ -37,7 +36,7 @@ const Settings = () => {
           <Prefrences />
           <DangerZone />
         </ScrollView>
-      </SafeAreaView>
+      </View>
     </LinearGradient>
   );
 };
