@@ -19,7 +19,6 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
   const { colors } = useTheme();
@@ -203,7 +202,7 @@ export default function Index() {
       style={homeStyles.container}
     >
       <StatusBar barStyle={colors.statusBarStyle} />
-      <SafeAreaView style={homeStyles.safeArea}>
+      <View style={homeStyles.safeArea}>
         <Header />
         <TodoInput />
         <FlatList
@@ -215,7 +214,7 @@ export default function Index() {
           ListEmptyComponent={<EmptyState />}
           showsVerticalScrollIndicator={false}
         />
-      </SafeAreaView>
+      </View>
     </LinearGradient>
   );
 }

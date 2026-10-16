@@ -8,6 +8,7 @@ export const createHomeStyles = (colors: ColorScheme) => {
     },
     safeArea: {
       flex: 1,
+      marginTop: 25,
     },
     loadingContainer: {
       flex: 1,
@@ -127,7 +128,6 @@ export const createHomeStyles = (colors: ColorScheme) => {
     },
     todoItemWrapper: {
       marginVertical: 12,
-      backgroundColor: "white",
     },
     todoItem: {
       flexDirection: "row",
